@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^recetas$ index.php?controlador=recetas&id=0
+RewriteRule ^recetas/nueva$ index.php?controlador=nueva_recetas&id=0
+RewriteRule ^creadores$ index.php?controlador=creadores&id=0
+RewriteRule ^recetas/([0-9]+)$ index.php?controlador=recetas&id=$1
+RewriteRule ^recetas/grabar(.*)$ index.php?controlador=grabar_recetas&id=0$1 [QSA,L]
+RewriteRule ^recetas/vista/(imagen|fotos|css|javascript)/(.*)$ vista/$1/$2
